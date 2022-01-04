@@ -21,18 +21,36 @@
         <br>
 
         @csrf
-        <label for="name">TBM Name</label>
-        <input class="form-control" placeholder="Nama Taman Bacaan Masyarakat" type="text" name="nama_tbm" id="nama_tbm" />
+        <!-- TBM Name -->
+        <label for="nama_tbm">TBM Name</label>
+        <input value="{{old('nama_tbm')}}" class="form-control {{$errors->first('nama_tbm')? "is-invalid": ""}}" placeholder="Nama Taman Bacaan Masyarakat" type="text" name="nama_tbm" id="nama_tbm" />
+        <div class="invalid-feedback">
+            {{$errors->first('TBM Name')}}
+        </div>
         <br>
-        <label for="address">Address</label>
-        <textarea name="alamat" id="alamat" class="form-control"></textarea>
+
+        <!-- Addres -->
+        <label for="alamat">Addres</label>
+        <input value="{{old('alamat')}}" class="form-control {{$errors->first('alamat')? "is-invalid": ""}}" placeholder="Ketikan Alamat TBM" type="text" name="alamat" id="alamat" />
+        <div class="invalid-feedback">
+            {{$errors->first('Address')}}
+        </div>
         <br>
-        <label for="name">Manager Name</label>
-        <input class="form-control" placeholder="Nama Pengelola" type="text" name="nama_pengelola" id="name" />
+
+        <!-- Manager Name -->
+        <label for="nama_pengelola">Manager Name</label>
+        <input value="{{old('nama_pengelola')}}" class="form-control {{$errors->first('nama_pengelola')? "is-invalid": ""}}" placeholder="Ketikan Nama Pengelola" type="text" name="nama_pengelola" id="nama_pengelola" />
+        <div class="invalid-feedback">
+            {{$errors->first('Manager Name')}}
+        </div>
         <br>
-        <label for="phone">Phone number</label>
-        <br>
-        <input type="text" name="no_telpon" class="form-control">
+
+        <!-- Phone Number -->
+        <label for="no_telpon">Phone Number</label>
+        <input value="{{old('no_telpon')}}" class="form-control {{$errors->first('no_telpon')? "is-invalid": ""}}" placeholder="Ketikan Nomor Telpon" type="text" name="no_telpon" id="no_telpon" />
+        <div class="invalid-feedback">
+            {{$errors->first('Phone Number')}}
+        </div>
         <br>
 
         <input class="btn btn-primary" type="submit" value="Save" />

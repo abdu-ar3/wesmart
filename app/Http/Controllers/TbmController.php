@@ -35,6 +35,15 @@ class TbmController extends Controller
      */
     public function store(Request $request)
     {
+        // Validasi
+        \Validator::make($request->all(), [
+            "nama_tbm" => "required|min:5|max:20",
+            "alamat" => "required|min:5|max:100",
+            "nama_pengelola" => "required|min:5|max:20",
+            "no_telpon" => "required",
+        ])->validate();
+
+        // New TBM
         $new_tbm = new \App\Models\Tbm;
 
         $new_tbm->nama_tbm = $request->get('nama_tbm');

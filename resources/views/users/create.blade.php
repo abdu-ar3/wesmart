@@ -18,6 +18,7 @@
     <!-- Form -->
     <form enctype="multipart/form-data" class="bg-white shadow-sm p-3" action="{{route('users.store')}}" method="POST">
         @csrf
+
         <!-- Name -->
         <label for="name">Name</label>
         <input value="{{old('name')}}" class="form-control {{$errors->first('name')
