@@ -1,0 +1,8 @@
+Role :
+1) git branch
+2) git branch dosen
+3) git checkout dosen
+4) git branch 
+5) git add .
+6) git commit -m ""
+7) git status
