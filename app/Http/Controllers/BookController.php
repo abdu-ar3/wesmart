@@ -35,6 +35,18 @@ class BookController extends Controller
      */
     public function store(Request $request)
     {
+        // Validasi
+        \Validator::make($request->all(), [
+            "name" => "required|min:5|max:20",
+            "alamat" => "required|min:10",
+            "pekerjaan" => "required|min:4",
+            "instansi" => "required|min:4",
+            "jumlah" => "required|min:4",
+            "tanggal_pengiriman" => "required|min:4",
+        ])->validate();
+
+
+        // New Donation Book
         $new_book = new \App\Models\Book;
 
         $new_book->name = $request->get('name');
