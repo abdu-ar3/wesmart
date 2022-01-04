@@ -4,15 +4,32 @@
 <div class="col-md-8">
     <form enctype="multipart/form-data" class="bg-white shadow-sm p-3" action="{{route('categories.store')}}" method="POST">
         @csrf
-        <label>Category name</label><br>
-        <input type="text" class="form-control" name="name" />
+
+        <!-- Category Name -->
+        <label for="name">Category Name</label>
+        <input value="{{old('name')}}" class="form-control {{$errors->first('name')? "is-invalid": ""}}" placeholder="Masukan nama kategori" type="text" name="name" id="name" />
+        <div class="invalid-feedback">
+            {{$errors->first('Category Name')}}
+        </div>
         <br>
-        <label>Deskripsi</label><br>
-        <textarea type="text" class="form-control" name="deskripsi"> </textarea>
+
+        <!-- Deskripsi -->
+        <label for="deskripsi">Deskripsi</label>
+        <input value="{{old('deskripsi')}}" class="form-control {{$errors->first('deskripsi')? "is-invalid": ""}}" placeholder="Ketikan Deskripsi" type="text" name="deskripsi" id="deskripsi" />
+        <div class="invalid-feedback">
+            {{$errors->first('Deskripsi')}}
+        </div>
         <br>
-        <label>Sinopsis</label><br>
-        <textarea type="text" class="form-control" name="sinopsis"> </textarea>
+
+        <!-- Sinopsis -->
+        <label for="sinopsis">Sinopsis</label>
+        <input value="{{old('sinopsis')}}" class="form-control {{$errors->first('sinopsis')? "is-invalid": ""}}" placeholder="Ketikan sinopsis" type="text" name="sinopsis" id="sinopsis" />
+        <div class="invalid-feedback">
+            {{$errors->first('Sinopsis')}}
+        </div>
         <br>
+
+
         <label>Category image</label>
         <input type="file" class="form-control" name="image" />
 

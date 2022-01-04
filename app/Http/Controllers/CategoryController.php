@@ -35,6 +35,15 @@ class CategoryController extends Controller
      */
     public function store(Request $request)
     {
+        // Validasi
+        \Validator::make($request->all(), [
+            "name" => "required|min:5|max:20",
+            "deskripsi" => "required|min:10",
+            "sinopsis" => "required|min:12",
+        ])->validate();
+
+
+        // New Category
         $name = $request->get('name');
         $new_category = new \App\Models\Category;
         $new_category->name = $name;
