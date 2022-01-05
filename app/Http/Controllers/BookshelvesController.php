@@ -35,6 +35,17 @@ class BookshelvesController extends Controller
      */
     public function store(Request $request)
     {
+        // Validasi
+        \Validator::make($request->all(), [
+            "name" => "required|min:5|max:20",
+            "addres" => "required|min:5",
+            "profesion" => "required|min:4",
+            "instance" => "required|min:4",
+            "total" => "required|min:4",
+            "delivery_date" => "required|min:4",
+        ])->validate();
+
+        // New Bookshelves
         $new_bookshelves = new \App\Models\Bookshelves;
 
         $new_bookshelves->name = $request->get('name');

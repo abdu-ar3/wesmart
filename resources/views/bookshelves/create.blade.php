@@ -28,10 +28,15 @@
                             <h4>Input Text</h4>
                         </div>
                         <div class="card-body">
-                            <div class="form-group">
-                                <label>Name</label>
-                                <input type="text" name="name" id="name" class="form-control" placeholder="Ketikan nama">
+
+                            <!-- Name -->
+                            <label for="name">Name</label>
+                            <input value="{{old('name')}}" class="form-control {{$errors->first('name')? "is-invalid": ""}}" placeholder="Ketikan name" type="text" name="name" id="name" />
+                            <div class="invalid-feedback">
+                                {{$errors->first('Name')}}
                             </div>
+                            <br>
+
                             <div class="form-group">
                                 <label>Phone Number</label>
                                 <div class="input-group">
@@ -43,20 +48,31 @@
                                     <input type="text" name="phone_number" class="form-control phone-number" placeholder="Masukan No Telpon">
                                 </div>
                             </div>
-                            <div class="form-group">
-                                <label>Addres</label>
-                                <input type="text" class="form-control" placeholder="Ketikan Alamat" name="addres">
-                            </div>
 
-                            <div class="form-group">
-                                <label>Profession</label>
-                                <input type="text" class="form-control" placeholder="Ketikan Pekerjaan Anda" name="profesion">
+                            <!-- Address -->
+                            <label for="addres">Address</label>
+                            <input value="{{old('addres')}}" class="form-control {{$errors->first('addres')? "is-invalid": ""}}" placeholder="Ketikan alamat" type="text" name="addres" id="addres" />
+                            <div class="invalid-feedback">
+                                {{$errors->first('Address')}}
                             </div>
+                            <br>
 
-                            <div class="form-group">
-                                <label>Instance</label>
-                                <input type="text" class="form-control" placeholder="Ketikan Instansi terkait" name="instance">
+                            <!-- Profession -->
+                            <label for="profesion">Profesion</label>
+                            <input value="{{old('profesion')}}" class="form-control {{$errors->first('profesion')? "is-invalid": ""}}" placeholder="Ketikan Pekerjaan Anda" type="text" name="profesion" id="profesion" />
+                            <div class="invalid-feedback">
+                                {{$errors->first('Profesion')}}
                             </div>
+                            <br>
+
+                            <!-- Instance -->
+                            <label for="instance">Instance</label>
+                            <input value="{{old('instance')}}" class="form-control {{$errors->first('instance')? "is-invalid": ""}}" placeholder="Ketikan Instansi" type="text" name="instance" id="instance" />
+                            <div class="invalid-feedback">
+                                {{$errors->first('Instance')}}
+                            </div>
+                            <br>
+
                         </div>
                     </div>
                 </div>
@@ -94,7 +110,10 @@
                                             <i class="fas fa-clock"></i>
                                         </div>
                                     </div>
-                                    <input type="text" name="delivery_date" class="form-control timepicker" placeholder="Masukan tanggal pengeriman buku">
+                                    <input value="{{old('delivery_date')}}" class="form-control {{$errors->first('delivery_date')? "is-invalid": ""}}" placeholder="Ketikan tanggal pengiriman" type="text" name="delivery_date" id="delivery_date" />
+                                    <div class="invalid-feedback">
+                                        {{$errors->first('Delivery Date')}}
+                                    </div>
                                 </div>
                             </div>
                         </div>
