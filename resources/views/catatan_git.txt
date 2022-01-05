@@ -1,0 +1,11 @@
+Membuat Branch baru :
+1) git branch
+2) git branch tester 
+3) git branch
+4) git checkout tester
+5) git branch 
+
+Menggabungkan :
+1) git branch
+2) git checkout master
+3) git merge tester
