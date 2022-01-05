@@ -66,6 +66,7 @@ Route::get('/category/search', [App\Http\Controllers\CategoryController::class, 
 Route::resource('categories', CategoryController::class);
 
 // Route Book
+Route::get('/bookdonation', [App\Http\Controllers\BookController::class, 'books'])->name('books');
 Route::get('/book/create', [App\Http\Controllers\BookController::class, 'create'])->name('book_create');
 Route::get('/book/thanks', [App\Http\Controllers\BookController::class, 'thanks'])->name('thanks');
 Route::post('/book/thanks', [App\Http\Controllers\BookController::class, 'thanks'])->name('thanks');

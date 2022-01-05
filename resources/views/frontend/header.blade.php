@@ -45,7 +45,7 @@
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 Help Facilities </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="{{route('book.create')}}">Book</a>
+                                <a class="dropdown-item" href="{{route('books')}}">Book</a>
                                 <a class="dropdown-item" href="{{route('ebook')}}">E-Book</a>
                                 <a class="dropdown-item" href="{{route('bookshelves.create')}}">Book Shelf</a>
                                 <a class="dropdown-item" href="">Donation Etc</a>

@@ -113,4 +113,9 @@ class BookController extends Controller
 
         return view('books.thanks');
     }
+
+    public function books()
+    {
+        return view('books.donation');
+    }
 }
