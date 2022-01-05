@@ -109,4 +109,10 @@ class BookshelvesController extends Controller
     {
         return view('bookshelves.thanks');
     }
+
+    // Bookshelves Donation
+    public function bookshelves_don()
+    {
+        return view('bookshelves.bs_donation');
+    }
 }

@@ -73,6 +73,7 @@ Route::post('/book/thanks', [App\Http\Controllers\BookController::class, 'thanks
 Route::resource('book', BookController::class);
 
 // Route BookShelf
+Route::get('/bookshelvesdon', [App\Http\Controllers\BookshelvesController::class, 'bookshelves_don'])->name('bookshelves_don');
 Route::get('/bookshelves/thanks', [App\Http\Controllers\BookshelvesController::class, 'thanks'])->name('thanks');
 Route::post('/bookshelves/thanks', [App\Http\Controllers\BookshelvesController::class, 'thanks'])->name('thanks');
 Route::resource('bookshelves', BookshelvesController::class);
