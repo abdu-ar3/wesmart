@@ -35,6 +35,14 @@ class EventController extends Controller
      */
     public function store(Request $request)
     {
+        // Validasi
+        \Validator::make($request->all(), [
+            "name" => "required|min:5|max:20",
+            "tanggal" => "required|min:5",
+            "deskripsi" => "required|min:4",
+        ])->validate();
+
+        // New Events
         $new_events = new \App\Models\Event;
 
         $new_events->name = $request->get('name');

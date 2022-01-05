@@ -21,14 +21,29 @@
         <br>
 
         @csrf
-        <label for="name">Name Event</label>
-        <input class="form-control" placeholder="Ketik nama kegiatan" type="text" name="name" id="name" />
+
+        <!-- Name Events -->
+        <label for="name">Event Name</label>
+        <input value="{{old('name')}}" class="form-control {{$errors->first('name')? "is-invalid": ""}}" placeholder="Ketikan nama Kegiatan" type="text" name="name" id="name" />
+        <div class="invalid-feedback">
+            {{$errors->first('Event Name')}}
+        </div>
         <br>
+
+        <!-- tanggal -->
         <label for="tanggal">Tanggal</label>
-        <input class="form-control" placeholder="Ketik tanggal kegiatan" type="text" name="tanggal" id="tanggal" />
+        <input value="{{old('tanggal')}}" class="form-control {{$errors->first('tanggal')? "is-invalid": ""}}" placeholder="Ketikan tanggal" type="text" name="tanggal" id="tanggal" />
+        <div class="invalid-feedback">
+            {{$errors->first('Tanggal')}}
+        </div>
         <br>
-        <label for="dekripsi">Deskripsi</label>
-        <textarea name="deskripsi" id="deskripsi" class="form-control"></textarea>
+
+        <!-- deskripsi -->
+        <label for="deskripsi">Deskripsi</label>
+        <input value="{{old('deskripsi')}}" class="form-control {{$errors->first('deskripsi')? "is-invalid": ""}}" placeholder="Ketikan deskripsi" type="text" name="deskripsi" id="deskripsi" />
+        <div class="invalid-feedback">
+            {{$errors->first('Deskripsi')}}
+        </div>
         <br>
 
         <!-- Image -->
