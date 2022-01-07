@@ -51,11 +51,14 @@
                                 <a class="dropdown-item" href="">Donation Etc</a>
                             </div>
                         </li>
-                        <li class="nav-item @@about">
-                            <a class="nav-link" href="{{route('frontic')}}">About</a>
+                        <li class="nav-item dropdown view">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Info </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="{{route('frontic')}}">IC</a>
+                                <a class="dropdown-item" href="{{route('flash')}}">News Flash</a>
+                            </div>
                         </li>
-
-
                     </ul>
                 </div>
             </nav>

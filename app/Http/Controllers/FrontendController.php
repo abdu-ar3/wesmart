@@ -39,4 +39,9 @@ class FrontendController extends Controller
     {
         return view('frontend/help.index');
     }
+
+    public function flash()
+    {
+        return view('frontend/flash.index');
+    }
 }
