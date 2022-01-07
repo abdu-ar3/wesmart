@@ -43,6 +43,7 @@ Route::resource("home", HomeController::class);
 Route::get('/dashboard', [App\Http\Controllers\FrontendController::class, 'dashboard'])->name('dashboard');
 Route::get('/ftbm', [App\Http\Controllers\FrontendController::class, 'ftbm'])->name('ftbm');
 Route::get('/frontic', [App\Http\Controllers\FrontendController::class, 'frontic'])->name('frontic');
+Route::get('/flash', [App\Http\Controllers\FrontendController::class, 'flash'])->name('flash');
 Route::get('/digital', [App\Http\Controllers\FrontendController::class, 'digital_reads'])->name('digital_reads');
 Route::get('/help/ebook', [App\Http\Controllers\FrontendController::class, 'ebook'])->name('ebook');
 // Route::get('/digital', [App\Http\Controllers\CategoryController::class, 'show'])->name('category.show');
