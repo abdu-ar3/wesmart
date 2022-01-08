@@ -126,6 +126,7 @@
 
     <!-- section -->
     <section class="section-sm">
+        @foreach ($categories as $category)
         <div class="container">
             <div class="row">
                 <div class="col-12 mb-4">
@@ -146,7 +147,7 @@
                                 <i class="ti-book text-primary icon-md mr-2"></i>
                                 <div class="text-left">
                                     <h6 class="mb-0">E Book</h6>
-                                    <p class="mb-0">06 (Six)</p>
+                                    <p class="mb-0">{{ $category->cnt_book }}</p>
                                 </div>
                             </div>
                         </li>
@@ -156,7 +157,7 @@
                                 <i class="ti-medall text-primary icon-md mr-2"></i>
                                 <div class="text-left">
                                     <h6 class="mb-0">Category</h6>
-                                    <p class="mb-0">name</p>
+                                    <p class="mb-0">{{ $category->name }}</p>
                                 </div>
                             </div>
                         </li>
@@ -175,7 +176,7 @@
 
 
                 <div class="col-xl-3 text-sm-right text-left order-sm-2 order-3 order-xl-3 col-sm-6 mb-4 mb-xl-0">
-                    <a href="#" class="btn btn-primary">Reads now</a>
+                    <a href="{{route('login')}}" class="btn btn-primary">Reads now</a>
                 </div>
 
                 <!-- border -->
@@ -188,35 +189,16 @@
             <div class="row">
 
                 <div class="col-12 mb-4">
-                    <h3>Category</h3>
+                    <h3>Synopsis</h3>
 
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-                        dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                        commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-                        nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
-                        anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
-                        laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae
-                        dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia
-                        consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem
-                        ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut
-                        labore et dolore magnam aliquam quaerat voluptatem.</p>
+                    <p>{{ $category->sinopsis }}</p>
                 </div>
                 <div class="col-12 mb-5">
-                    <h3>Fees and Funding</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-                        dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                        commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-                        nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
-                        anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
-                        laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae
-                        dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia
-                        consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem
-                        ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut
-                        labore et dolore magnam aliquam quaerat voluptatem.</p>
+                    <h3>Description</h3>
+                    <p>{{ $category->deskripsi }}</p>
                 </div>
                 <!-- teacher -->
                 <div class="col-12">
-                    <h5 class="mb-3">Teacher</h5>
                     <div class="d-flex justify-content-between align-items-center flex-wrap">
                         <div class="social-link">
                             <h6 class="d-none d-sm-block">Social Link</h6>
@@ -233,6 +215,7 @@
 
             </div>
         </div>
+        @endforeach
     </section>
     <!-- /section -->
 

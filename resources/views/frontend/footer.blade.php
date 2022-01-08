@@ -1,5 +1,5 @@
 <footer>
-    <!-- newsletter -->
+    <!-- newsletter
     <div class="newsletter">
         <div class="container">
             <div class="row">
@@ -14,7 +14,8 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
+
     <!-- footer content -->
     <div class="footer bg-footer section border-bottom">
         <div class="container">

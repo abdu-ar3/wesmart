@@ -15,7 +15,7 @@
 
         <!-- Deskripsi -->
         <label for="deskripsi">Deskripsi</label>
-        <input value="{{old('deskripsi')}}" class="form-control {{$errors->first('deskripsi')? "is-invalid": ""}}" placeholder="Ketikan Deskripsi" type="text" name="deskripsi" id="deskripsi" />
+        <textarea input value="{{old('deskripsi')}}" class="form-control {{$errors->first('deskripsi')? "is-invalid": ""}}" placeholder="Ketikan Deskripsi" type="text" name="deskripsi" id="deskripsi"></textarea>
         <div class="invalid-feedback">
             {{$errors->first('Deskripsi')}}
         </div>
@@ -23,7 +23,7 @@
 
         <!-- Sinopsis -->
         <label for="sinopsis">Sinopsis</label>
-        <input value="{{old('sinopsis')}}" class="form-control {{$errors->first('sinopsis')? "is-invalid": ""}}" placeholder="Ketikan sinopsis" type="text" name="sinopsis" id="sinopsis" />
+        <textarea input value="{{old('sinopsis')}}" class="form-control {{$errors->first('sinopsis')? "is-invalid": ""}}" placeholder="Ketikan sinopsis" type="text" name="sinopsis" id="sinopsis" /></textarea>
         <div class="invalid-feedback">
             {{$errors->first('Sinopsis')}}
         </div>

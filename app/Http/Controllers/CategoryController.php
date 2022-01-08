@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class CategoryController extends Controller
 {
@@ -76,7 +77,29 @@ class CategoryController extends Controller
 
     public function show($id)
     {
-        $categories = \App\Models\Category::findOrFail($id);
+        //$categories = \App\Models\Category::findOrFail($id);
+        $digital_reads = \App\Models\Digital_read::where('category_id', $id);
+        $categories = DB::table('categories')
+            ->select(DB::raw('COUNT(digital_reads.id) AS cnt_book'), 'categories.*')
+            ->leftJoinSub($digital_reads, 'digital_reads', function ($join) {
+                $join->on('categories.id', '=', 'digital_reads.category_id');
+            })
+            ->where('categories.id', $id)
+            ->groupBy(
+                'categories.id',
+                'categories.name',
+                'categories.slug',
+                'categories.deskripsi',
+                'categories.sinopsis',
+                'categories.image',
+                'categories.created_by',
+                'categories.updated_by',
+                'categories.deleted_by',
+                'categories.created_at',
+                'categories.updated_at',
+                'categories.deleted_at'
+            )
+            ->get();
         return view('frontend/digital.sinopsis', ['categories' => $categories]);
     }
 
