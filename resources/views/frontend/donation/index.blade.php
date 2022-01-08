@@ -158,7 +158,7 @@
                             </ul>
 
                             <p>Kirimkan donasi terbaik kamu ke Bank Syariah Indonesi No. Rek. A/N WanFatma ketua Forum TBM Kabupaten Tangerang. Donasi bisa juga dikirim melalui Go-Pay, OVO, DANA atau LinkAja ditujukan ke No HP +62 896-5190-4609 A/N WanFatma.</p>
-                            <a href="#" class="btn btn-primary">Confirmation</a>
+                            <a href="https://bit.ly/Connfirm_Don" class="btn btn-primary">Confirmation</a>
                         </div>
                     </div>
                 </div>
