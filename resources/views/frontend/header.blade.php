@@ -4,7 +4,7 @@
         <div class="container">
             <div class="row no-gutters">
                 <div class="col-lg-4 text-center text-lg-left">
-                    <a class="text-color mr-3" href="callto:+443003030266"><strong>F_TBM</strong> Kab. Tangerang</a>
+                    <a class="text-color mr-3" href="callto:+443003030266"><strong>Forum_TBM</strong> Kab. Tangerang</a>
                     <ul class="list-inline d-inline">
                         <li class="list-inline-item mx-0"><a class="d-inline-block p-2 text-color" href="#"><i class="ti-facebook"></i></a></li>
                         <li class="list-inline-item mx-0"><a class="d-inline-block p-2 text-color" href="#"><i class="ti-twitter-alt"></i></a></li>
@@ -14,7 +14,7 @@
                 </div>
                 <div class="col-lg-8 text-center text-lg-right">
                     <ul class="list-inline">
-                        <li class="list-inline-item"><a class="text-uppercase text-color p-sm-2 py-2 px-0 d-inline-block" href="{route('login')}}">login</a></li>
+                        <li class="list-inline-item"><a class="text-uppercase text-color p-sm-2 py-2 px-0 d-inline-block" href="{route('auth.login')}}">login</a></li>
                         <li class="list-inline-item"><a class="text-uppercase text-color p-sm-2 py-2 px-0 d-inline-block" href="#" data-toggle="modal" data-target="#signupModal">register</a></li>
                     </ul>
                 </div>
@@ -48,7 +48,7 @@
                                 <a class="dropdown-item" href="{{route('books')}}">Book</a>
                                 <a class="dropdown-item" href="{{route('ebook')}}">E-Book</a>
                                 <a class="dropdown-item" href="{{route('bookshelves_don')}}">Book Shelf</a>
-                                <a class="dropdown-item" href="">Donation Etc</a>
+                                <a class="dropdown-item" href="{{route('donation')}}">Donation Etc</a>
                             </div>
                         </li>
                         <li class="nav-item dropdown view">

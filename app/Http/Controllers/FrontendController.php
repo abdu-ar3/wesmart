@@ -44,4 +44,9 @@ class FrontendController extends Controller
     {
         return view('frontend/flash.index');
     }
+
+    public function donation()
+    {
+        return view('frontend/donation.index');
+    }
 }
