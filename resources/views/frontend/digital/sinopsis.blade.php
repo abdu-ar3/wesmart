@@ -131,7 +131,7 @@
             <div class="row">
                 <div class="col-12 mb-4">
                     <!-- course thumb -->
-                    <img src="{{asset('frontend/images/sinopsis/storyislam.jpg')}}" class="img-fluid w-100">
+                    <img src="http://localhost/wesmart1/storage/app/public/{{$category->image}}" class="img-fluid w-100">
                 </div>
             </div>
             <!-- course info -->

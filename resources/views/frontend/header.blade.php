@@ -14,7 +14,7 @@
                 </div>
                 <div class="col-lg-8 text-center text-lg-right">
                     <ul class="list-inline">
-                        <li class="list-inline-item"><a class="text-uppercase text-color p-sm-2 py-2 px-0 d-inline-block" href="{route('login')}}">login</a></li>
+                        <li class="list-inline-item"><a class="text-uppercase text-color p-sm-2 py-2 px-0 d-inline-block" href="{{route('login')}}">login</a></li>
                         <li class="list-inline-item"><a class="text-uppercase text-color p-sm-2 py-2 px-0 d-inline-block" href="#" data-toggle="modal" data-target="#signupModal">register</a></li>
                     </ul>
                 </div>
@@ -31,7 +31,7 @@
                 </button>
 
                 <div class="collapse navbar-collapse" id="navigation">
-                    <ul class="navbar-nav ml-auto text-center">
+                    <ul class="navbar-nav ml-auto text-center menulist">
                         <li class="nav-item active">
                             <a class="nav-link" href="{{route('dashboard')}}">Home</a>
                         </li>
@@ -69,7 +69,8 @@
 @section('js-script')
 
 <script type="text/javascript">
-    $('.nav li').click(function() {
+    $('menulist li').click(function() {
+        alert("tes")
         $('.nav li').removeClass('active');
         $(this).addClass('active');
     })
