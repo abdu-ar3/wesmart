@@ -3,10 +3,21 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Gate;
 use Illuminate\Support\Facades\DB;
 
 class CategoryController extends Controller
 {
+    // public function __construct()
+    // {
+    //     // OTORISASI GATE
+    //     $this->middleware(function ($request, $next) {
+
+    //         if (Gate::allows('manage-categories')) return $next($request);
+    //         abort(403, 'Anda tidak memiliki cukup hak akses');
+    //     });
+    // }
+
     /**
      * Display a listing of the resource.
      *
@@ -14,6 +25,12 @@ class CategoryController extends Controller
      */
     public function index()
     {
+        // OTORISASI GATE
+        $this->middleware(function ($request, $next) {
+
+            if (Gate::allows('manage-categories')) return $next($request);
+            abort(403, 'Anda tidak memiliki cukup hak akses');
+        });
         $categories = \App\Models\Category::paginate(10);
         return view('categories.index', ['categories' => $categories]);
     }

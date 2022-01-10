@@ -23,13 +23,14 @@
 
             <li class="menu-header">Starter</li>
             <!-- Manage Akun -->
+            @if (auth()->user()->level == "admin")
             <li class="nav-item dropdown">
                 <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="fas fa-user-cog"></i> <span>Manage Akun</span></a>
                 <ul class="dropdown-menu">
-                    <li><a class="nav-link" href="layout-default.html">Admin</a></li>
-                    <li><a class="nav-link" href="{{route('users.index')}}">User</a></li>
+                    <li><a class="nav-link" href="{{route('users.index')}}">Akun</a></li>
                 </ul>
             </li>
+
 
             <li class="nav-item dropdown">
                 <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="fas fa-book"></i> <span>Manage Profile TBM</span></a>
@@ -37,7 +38,9 @@
                     <li><a class="nav-link" href="{{route('tbm.index')}}">Profile</a></li>
                 </ul>
             </li>
+            @endif
 
+            @if (auth()->user()->level == "user")
             <li class="nav-item dropdown">
                 <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="fas fa-book-open"></i> <span>Manage Digital Reads</span></a>
                 <ul class="dropdown-menu">
@@ -47,6 +50,7 @@
                     <li><a class="nav-link" href="{{route('categories.index')}}">Category</a></li>
                 </ul>
             </li>
+            @endif
 
             <li class=" menu-header">PAGES</li>
             <li class="nav-item dropdown">

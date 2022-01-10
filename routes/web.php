@@ -27,9 +27,14 @@ Route::get('/', function () {
     return view('frontend.client');
 });
 
+Route::group(['middleware' => ['auth', 'ceklevel:admin,user']], function () {
+    Route::get('/home', [HomeController::class, 'index'])->name('home');
+});
 
 // Autentikasi
 Auth::routes();
+
+
 
 
 // Route Home Controller

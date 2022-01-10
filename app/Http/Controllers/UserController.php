@@ -3,9 +3,20 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Gate;
 
 class UserController extends Controller
 {
+    public function __construct()
+    {
+        // OTORISASI GATE
+        $this->middleware(function ($request, $next) {
+
+            if (Gate::allows('manage-users')) return $next($request);
+            abort(403, 'Anda tidak memiliki cukup hak akses');
+        });
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -47,6 +58,7 @@ class UserController extends Controller
         // New User
         $new_user = new \App\Models\User;
         $new_user->name = $request->get('name');
+        $new_user->level = $request->get('level');
         $new_user->username = $request->get('username');
         $new_user->roles = json_encode($request->get('roles'));
         $new_user->address = $request->get('address');

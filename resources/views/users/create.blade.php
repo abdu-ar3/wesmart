@@ -28,6 +28,11 @@
         </div>
         <br>
 
+        <label for="level">level</label>
+        <br>
+        <input type="text" name="level" class="form-control">
+        <br>
+
         <!-- Username -->
         <label for="username">Username</label>
         <input value="{{old('username')}}" class="form-control {{$errors->first('username') ? "is-invalid" : ""}}" placeholder="username" type="text" name="username" id="username" />

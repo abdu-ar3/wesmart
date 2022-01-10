@@ -15,6 +15,12 @@
                     @endif
 
                     {{ __('You are logged in!') }}
+
+                    <br><br>
+                    RULE (Aturan) <br>
+                    Ketika Kamu login sebagai User : <br>
+                    1) Silakan Masuk ke Halaman Manage Digital Reads <br>
+                    2) Kemudiann Klik Reads Students
                 </div>
             </div>
         </div>
