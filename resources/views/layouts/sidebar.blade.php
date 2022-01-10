@@ -40,18 +40,20 @@
             </li>
             @endif
 
-            @if (auth()->user()->level == "user")
+
             <li class="nav-item dropdown">
                 <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="fas fa-book-open"></i> <span>Manage Digital Reads</span></a>
                 <ul class="dropdown-menu">
                     <li><a class="nav-link" href="{{route('digital_reads.index')}}">Reads Student</a></li>
                 </ul>
+                @if (auth()->user()->level == "admin")
                 <ul class="dropdown-menu">
                     <li><a class="nav-link" href="{{route('categories.index')}}">Category</a></li>
                 </ul>
+                @endif
             </li>
-            @endif
 
+            @if (auth()->user()->level == "admin")
             <li class=" menu-header">PAGES</li>
             <li class="nav-item dropdown">
                 <a href="#" class="nav-link has-dropdown"><i class="fas fa-hands-helping"></i> <span>Manage Help Facilities</span></a>
@@ -69,7 +71,7 @@
                     <li><a class="nav-link" href="components-table.html">Article</a></li>
                 </ul>
             </li>
-
+            @endif
         </ul>
 
         <div class="mt-4 mb-4 p-3 hide-sidebar-mini">
