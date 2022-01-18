@@ -44,15 +44,9 @@
                     <td>{{$event->name}}</td>
                     <td>{{$event->tanggal}}</td>
                     <td>{{$event->deskripsi}}</td>
-                    <!-- <td>@if($event->avatar)
-                        <img src="{{asset('storage/'.$event->avatar)}}" width="70px" />
-                        @else
-                        N/A
-                        @endif
-                    </td> -->
                     <td>
                         <a class="btn btn-info text-white btn-sm" href="{{route('event.edit', [$event->id])}}">Edit</a>
-                        <form onsubmit="return confirm('Delete this TBM permanently?')" class="d-inline" action="#" method="POST">
+                        <form onsubmit="return confirm('Delete this TBM permanently?')" class="d-inline" action="{{route('event.destroy', [$event->id])}}" method="POST">
                             @csrf
                             <input type="hidden" name="_method" value="DELETE">
                             <input type="submit" value="Delete" class="btn btn-danger btn-sm">

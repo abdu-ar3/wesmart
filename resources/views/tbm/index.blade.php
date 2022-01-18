@@ -37,9 +37,12 @@
                 </tr>
             </thead>
             <tbody>
+                <?php
+                $no = 1;
+                ?>
                 @foreach($tbms as $tbm)
                 <tr>
-                    <td>{{$tbm->id}}</td>
+                    <td><?= $no++; ?></td>
                     <td>{{$tbm->nama_tbm}}</td>
                     <td>{{$tbm->nama_pengelola}}</td>
                     <td>{{$tbm->no_telpon}}</td>
@@ -56,7 +59,8 @@
                 @endforeach
             </tbody>
         </table>
-
+        <!-- {{ $tbms->links() }} -->
+        {{$tbms->appends(Request::all())->links()}}
     </form>
 </div>
 @endsection

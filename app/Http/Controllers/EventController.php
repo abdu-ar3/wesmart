@@ -120,6 +120,8 @@ class EventController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $event = \App\Models\Event::findOrFail($id);
+        $event->delete();
+        return redirect()->route('event.index')->with('status', 'Event successfully deleted');
     }
 }

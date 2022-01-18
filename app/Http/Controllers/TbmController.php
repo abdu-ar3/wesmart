@@ -13,8 +13,8 @@ class TbmController extends Controller
      */
     public function index()
     {
-        $tbms = \App\Models\Tbm::paginate(10);
-        return view('tbm.index', ['tbms' => $tbms]);
+        $tbm = \App\Models\Tbm::simplePaginate(10);
+        return view('tbm.index', ['tbms' => $tbm]);
     }
 
     /**
@@ -37,9 +37,9 @@ class TbmController extends Controller
     {
         // Validasi
         \Validator::make($request->all(), [
-            "nama_tbm" => "required|min:5|max:20",
-            "alamat" => "required|min:5|max:100",
-            "nama_pengelola" => "required|min:5|max:20",
+            "nama_tbm" => "required|min:5|max:30",
+            "alamat" => "required|min:5|max:120",
+            "nama_pengelola" => "required|min:4|max:24",
             "no_telpon" => "required",
         ])->validate();
 
@@ -111,7 +111,6 @@ class TbmController extends Controller
     {
         $tbm = \App\Models\Tbm::findOrFail($id);
         $tbm->delete();
-        return redirect()->route('tbm.index')->with('status', 'TBM
-successfully deleted');
+        return redirect()->route('tbm.index')->with('status', 'TBM successfully deleted');
     }
 }

@@ -13,7 +13,7 @@ class FrontendController extends Controller
 
     public function ftbm()
     {
-        $tbms = \App\Models\Tbm::paginate(10);
+        $tbms = \App\Models\Tbm::simplePaginate(12);
         return view('frontend/tbm.index', ['tbms' => $tbms]);
     }
 

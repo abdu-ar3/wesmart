@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateTbmTable extends Migration
+class CreateTbmsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -15,10 +15,14 @@ class CreateTbmTable extends Migration
     {
         Schema::create('tbms', function (Blueprint $table) {
             $table->id();
-            $table->string("nama_tbm")->unique();
+            $table->string("nama_tbm");
             $table->string("alamat");
             $table->string("nama_pengelola");
             $table->string("no_telpon")->nullable();
+            $table->integer("created_by");
+            $table->integer("updated_by")->nullable();
+            $table->integer("deleted_by")->nullable();
+            $table->softDeletes();
             $table->timestamps();
         });
     }
@@ -30,6 +34,6 @@ class CreateTbmTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('tbm');
+        Schema::dropIfExists('tbms');
     }
 }

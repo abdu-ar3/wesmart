@@ -167,7 +167,9 @@
 
                 </div>
             </div>
+            {{ $tbms->links() }}
         </section>
+
         <!-- /research -->
     </div>
 
