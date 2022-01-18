@@ -4,6 +4,14 @@
 @section('content')
 <div class="row">
     <div class="col-md-8">
+
+        <!-- Message -->
+        @if(session('status'))
+        <div class="alert alert-success">
+            {{session('status')}}
+        </div>
+        @endif
+
         <form action="{{route('digital_reads.store')}}" method="POST" enctype="multipart/form-data" class="shadow-sm p-3 bg-white">
             @csrf
             <label for="title">Title</label> <br>

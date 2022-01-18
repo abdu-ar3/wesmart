@@ -51,10 +51,22 @@
                     <div class="article-title">
                         <h2><a href="#">{{ $digital_read->title }}</a></h2>
                     </div>
-                    <p>{{ $digital_read->description }}</p>
+                    <p>Author: {{ $digital_read->author }}</p>
+                    <p>Publisher: {{ $digital_read->publisher }}</p>
+                    <!-- <p>{{ $digital_read->description }}</p> -->
                     <div class="article-cta">
+                        @if (auth()->user()->level == "admin")
+                        <a class="btn btn-info text-white btn-sm" href="{{route('digital_reads.edit', [$digital_read->id])}}">Edit</a>
+                        @endif
                         <input type="hidden" id="file_pdf" value="http://localhost/wesmart1/storage/app/public/{{ $digital_read->file_pdf }}">
                         <a href="#" class="btn btn-primary" onclick="showModal(this)">Show</a>
+                        @if (auth()->user()->level == "admin")
+                        <form onsubmit="return confirm('Delete this TBM permanently?')" class="d-inline" action="{{route('digital_reads.destroy', [$digital_read->id])}}" method="POST">
+                            @csrf
+                            <input type="hidden" name="_method" value="DELETE">
+                            <input type="submit" value="Delete" class="btn btn-danger btn-sm">
+                        </form>
+                        @endif
                     </div>
                 </div>
             </article>

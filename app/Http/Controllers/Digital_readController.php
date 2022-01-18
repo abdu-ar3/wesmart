@@ -88,7 +88,8 @@ class Digital_readController extends Controller
      */
     public function edit($id)
     {
-        //
+        $digital_reads = \App\Models\Digital_read::findOrFail($id);
+        return view('digital_reads.edit', ['digital_read' => $digital_reads]);
     }
 
     /**
@@ -100,7 +101,15 @@ class Digital_readController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $digital_reads = \App\Models\Digital_read::findOrFail($id);
+
+        $digital_reads->title = $request->get('title');
+        $digital_reads->author = $request->get('author');
+        $digital_reads->publisher = $request->get('publisher');
+
+        $digital_reads->save();
+
+        return redirect()->route('digital_reads.index', [$id])->with('status', 'TBM succesfully updated');
     }
 
     /**
@@ -111,6 +120,8 @@ class Digital_readController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $digital_reads = \App\Models\Digital_read::findOrFail($id);
+        $digital_reads->delete();
+        return redirect()->route('digital_reads.index')->with('status', 'digital_reads successfully deleted');
     }
 }
