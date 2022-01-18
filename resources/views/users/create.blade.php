@@ -28,27 +28,19 @@
         </div>
         <br>
 
-        <label for="level">level</label>
+        <label for="level">level (Tidak perlu di Ubah)</label>
         <br>
-        <input type="text" name="level" class="form-control">
+        <input type="text" name="level" class="form-control" value="user">
         <br>
 
         <!-- Username -->
         <label for="username">Username</label>
-        <input value="{{old('username')}}" class="form-control {{$errors->first('username') ? "is-invalid" : ""}}" placeholder="username" type="text" name="username" id="username" />
+        <input class="form-control {{$errors->first('username') ? "is-invalid" : ""}}" placeholder="username" type="text" name="username" id="username" />
         <div class="invalid-feedback">
             {{$errors->first('username')}}
         </div>
         <br>
 
-        <label for="">Roles</label>
-        <br>
-        <input type="checkbox" name="roles[]" id="ADMIN" value="ADMIN">
-        <label for="ADMIN">Admin</label>
-        <input type="checkbox" name="roles[]" id="USER" value="USER">
-        <label for="USER">User</label>
-        <br>
-        <br>
         <label for="phone">Phone number</label>
         <br>
         <input type="text" name="phone" class="form-control">

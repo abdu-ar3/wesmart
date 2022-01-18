@@ -4,12 +4,13 @@
 
 <div class="card col-md-8">
     <div class="card-header">
-        <h3>Detail Taman Baca</h3>
+        <h3>Users Show</h3>
     </div>
     <div class="card-body">
         <blockquote class="blockquote mb-0">
             <b>Name:</b> <br />
             {{$user->name}}
+
             <br><br>
             <b>Image:</b><br>
             @if($user->avatar)
@@ -28,23 +29,13 @@
             <br><br>
             <b>Address</b> <br>
             {{$user->address}}
+            <br>
+            <b>Level:</b> <br />
+            {{$user->level}}
 
-            <br>
-            <br>
-            <b>Roles:</b> <br>
-            @foreach (json_decode($user->roles) as $role)
-            &middot; {{$role}} <br>
-            @endforeach
             <footer class="blockquote-footer">Budayakan baca <cite title="Source Title">Menjadi Habit</cite></footer>
         </blockquote>
     </div>
 </div>
 
-<div class="col-md-8">
-    <div class="card">
-        <div class="card-body">
-
-        </div>
-    </div>
-</div>
 @endsection

@@ -193,135 +193,18 @@
         </div>
     </section>
 
-    <!-- Digital Reads -->
-    <section class="section-sm">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <div class="d-flex align-items-center section-title justify-content-between">
-                        <h2 class="mb-0 text-nowrap mr-3">Digital Reads</h2>
-                        <div class="border-top w-100 border-primary d-none d-sm-block"></div>
-                        <div>
-                            <a href="courses.html" class="btn btn-sm btn-primary-outline ml-sm-3 d-none d-sm-block">see all</a>
-                        </div>
-                    </div>
-                </div>
+    <div class="container">
+        <div class="row align-items-center">
+            <h2 class="section-title">Bagan Forum TBM</h2>
+            <div class="col-md-12 order-1 order-md-2 mb-4 mb-md-0">
+                <img class="img-fluid w-100" src="{{asset('frontend/images/about/baganftbm1.jpg')}}" alt="about image">
             </div>
-            <!-- course list -->
-            <div class="row justify-content-center">
-                <!-- course item -->
-                <div class="col-lg-4 col-sm-6 mb-5">
-                    <div class="card p-0 border-primary rounded-0 hover-shadow">
-                        <div class="card-body">
-                            <ul class="list-inline mb-2">
-                                <li class="list-inline-item"><i class="ti-calendar mr-1 text-color"></i>02-14-2018</li>
-                                <li class="list-inline-item"><a class="text-color" href="#">Categories</a></li>
-                            </ul>
-                            <a href="course-single.html">
-                                <h4 class="card-title">Story Book</h4>
-                            </a>
-                            <p class="card-text mb-4">Description</p>
-                            <a href="course-single.html" class="btn btn-primary btn-sm">SHOW</a>
-                        </div>
-                    </div>
-                </div>
 
-                <!-- course item -->
-                <div class="col-lg-4 col-sm-6 mb-5">
-                    <div class="card p-0 border-primary rounded-0 hover-shadow">
-                        <div class="card-body">
-                            <ul class="list-inline mb-2">
-                                <li class="list-inline-item"><i class="ti-calendar mr-1 text-color"></i>02-14-2018</li>
-                                <li class="list-inline-item"><a class="text-color" href="#">Categories</a></li>
-                            </ul>
-                            <a href="course-single.html">
-                                <h4 class="card-title">Story Book</h4>
-                            </a>
-                            <p class="card-text mb-4">Description</p>
-                            <a href="course-single.html" class="btn btn-primary btn-sm">SHOW</a>
-                        </div>
-                    </div>
-                </div>
+        </div>
+    </div>
 
-                <!-- course item -->
-                <div class="col-lg-4 col-sm-6 mb-5">
-                    <div class="card p-0 border-primary rounded-0 hover-shadow">
-                        <div class="card-body">
-                            <ul class="list-inline mb-2">
-                                <li class="list-inline-item"><i class="ti-calendar mr-1 text-color"></i>02-14-2018</li>
-                                <li class="list-inline-item"><a class="text-color" href="#">Categories</a></li>
-                            </ul>
-                            <a href="course-single.html">
-                                <h4 class="card-title">Story Book</h4>
-                            </a>
-                            <p class="card-text mb-4">Description</p>
-                            <a href="course-single.html" class="btn btn-primary btn-sm">SHOW</a>
-                        </div>
-                    </div>
-                </div>
+    <br>
 
-                <!-- course item -->
-                <div class="col-lg-4 col-sm-6 mb-5">
-                    <div class="card p-0 border-primary rounded-0 hover-shadow">
-                        <div class="card-body">
-                            <ul class="list-inline mb-2">
-                                <li class="list-inline-item"><i class="ti-calendar mr-1 text-color"></i>02-14-2018</li>
-                                <li class="list-inline-item"><a class="text-color" href="#">Categories</a></li>
-                            </ul>
-                            <a href="course-single.html">
-                                <h4 class="card-title">Story Book</h4>
-                            </a>
-                            <p class="card-text mb-4">Description</p>
-                            <a href="course-single.html" class="btn btn-primary btn-sm">SHOW</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- course item -->
-                <div class="col-lg-4 col-sm-6 mb-5">
-                    <div class="card p-0 border-primary rounded-0 hover-shadow">
-                        <div class="card-body">
-                            <ul class="list-inline mb-2">
-                                <li class="list-inline-item"><i class="ti-calendar mr-1 text-color"></i>02-14-2018</li>
-                                <li class="list-inline-item"><a class="text-color" href="#">Categories</a></li>
-                            </ul>
-                            <a href="course-single.html">
-                                <h4 class="card-title">Story Book</h4>
-                            </a>
-                            <p class="card-text mb-4">Description</p>
-                            <a href="course-single.html" class="btn btn-primary btn-sm">SHOW</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- course item -->
-                <div class="col-lg-4 col-sm-6 mb-5">
-                    <div class="card p-0 border-primary rounded-0 hover-shadow">
-                        <div class="card-body">
-                            <ul class="list-inline mb-2">
-                                <li class="list-inline-item"><i class="ti-calendar mr-1 text-color"></i>02-14-2018</li>
-                                <li class="list-inline-item"><a class="text-color" href="#">Categories</a></li>
-                            </ul>
-                            <a href="course-single.html">
-                                <h4 class="card-title">Story Book</h4>
-                            </a>
-                            <p class="card-text mb-4">Description</p>
-                            <a href="course-single.html" class="btn btn-primary btn-sm">SHOW</a>
-                        </div>
-                    </div>
-                </div>
-
-
-                <!-- /course list -->
-                <!-- mobile see all button -->
-                <div class="row">
-                    <div class="col-12 text-center">
-                        <a href="courses.html" class="btn btn-sm btn-primary-outline d-sm-none d-inline-block">sell all</a>
-                    </div>
-                </div>
-            </div>
-    </section>
-    <!-- /courses -->
 
     <!-- footer -->
     @include('frontend.footer')
@@ -341,10 +224,10 @@
     <script src="{{asset('frontend/plugins/filterizr/jquery.filterizr.min.js')}}"></script>
     <!-- google map -->
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBu5nZKbeK-WHQ70oqOWo-_4VmwOwKP9YQ"></script>
-    <script src="plugins/google-map/gmap.js"></script>
+    <script src="{{asset('frontend/plugins/google-map/gmap.js')}}""></script>
 
     <!-- Main Script -->
-    <script src="{{asset('frontend/js/script.js')}}"></script>
+    <script src=" {{asset('frontend/js/script.js')}}"></script>
 
     @yield('js-script')
 

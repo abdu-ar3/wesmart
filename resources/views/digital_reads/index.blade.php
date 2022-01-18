@@ -27,11 +27,13 @@
     <h2 class="section-title">Read Student</h2>
 
     <!-- Create -->
+    @if (auth()->user()->level == "admin")
     <div class="row mb-3">
         <div class="col-md-12 text-right">
             <a href="{{route('digital_reads.create')}}" class="btn btn-primary">Create List</a>
         </div>
     </div>
+    @endif
 
 
     <div class="row">
@@ -39,7 +41,7 @@
         <div class="col-12 col-sm-6 col-md-6 col-lg-3">
             <article class="article article-style-b">
                 <div class="article-header">
-                    <div class="article-image" data-background="../assets/img/news/img13.jpg">
+                    <div class="article-image" data-background="http://localhost/wesmart1/storage/app/public/{{ $digital_read->cover }}">
                     </div>
                     <div class="article-badge">
                         <div class="article-badge-item bg-danger"><i class="fas fa-fire"></i> Trending</div>

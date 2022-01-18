@@ -48,8 +48,8 @@ class UserController extends Controller
     {
         // Validasi
         \Validator::make($request->all(), [
-            "name" => "required|min:5|max:100",
-            "username" => "required|min:5|max:20",
+            "name" => "required|min:4|max:100",
+            "username" => "required|min:4|max:20",
             "email" => "required|email",
             "password" => "required",
             "password_confirmation" => "required|same:password"

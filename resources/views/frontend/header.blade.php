@@ -32,13 +32,13 @@
 
                 <div class="collapse navbar-collapse" id="navigation">
                     <ul class="navbar-nav ml-auto text-center menulist">
-                        <li class="nav-item active">
+                        <li class="nav-item @@home active">
                             <a class="nav-link" href="{{route('dashboard')}}">Home</a>
                         </li>
-                        <li class="nav-item @@tbm">
+                        <li class="nav-item @@@about">
                             <a class="nav-link" href="{{route('ftbm')}}">Profile TBM</a>
                         </li>
-                        <li class="nav-item @@dr">
+                        <li class="nav-item @@courses">
                             <a class="nav-link" href="{{route('digital_reads')}}">Digital Reads</a>
                         </li>
                         <li class="nav-item dropdown view">
