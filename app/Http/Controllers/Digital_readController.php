@@ -59,8 +59,8 @@ class Digital_readController extends Controller
         $new_digital_read->save();
         if ($request->get('save_action') == 'PUBLISH') {
             return redirect()
-                ->route('digital_reads.create')
-                ->with('status', 'digital_read successfully saved and published');
+                ->route('digital_reads.index')
+                ->with('status', 'E-Book successfully saved and published');
         } else {
             return redirect()
                 ->route('digital_reads.create')
@@ -109,7 +109,7 @@ class Digital_readController extends Controller
 
         $digital_reads->save();
 
-        return redirect()->route('digital_reads.index', [$id])->with('status', 'TBM succesfully updated');
+        return redirect()->route('digital_reads.index', [$id])->with('status', 'Data E-Book succesfully updated');
     }
 
     /**
@@ -122,6 +122,6 @@ class Digital_readController extends Controller
     {
         $digital_reads = \App\Models\Digital_read::findOrFail($id);
         $digital_reads->delete();
-        return redirect()->route('digital_reads.index')->with('status', 'digital_reads successfully deleted');
+        return redirect()->route('digital_reads.index')->with('status', 'Data E-Books successfully deleted');
     }
 }
