@@ -59,11 +59,24 @@
                 <a href="#" class="nav-link has-dropdown"><i class="fas fa-hands-helping"></i> <span>Manage Help Facilities</span></a>
                 <ul class="dropdown-menu">
                     <li><a class="nav-link" href="{{route('book.index')}}">Book</a></li>
-                    <li><a class="nav-link" href="#">Digital Modul</a></li>
                     <li><a class="nav-link" href="{{route('bookshelves.index')}}">Bookshelves</a></li>
-                    <li><a class="nav-link" href="components-user.html">Donation</a></li>
                 </ul>
             </li>
+
+            @endif
+            @if (auth()->user()->level == "user")
+            <li class=" menu-header">PAGES</li>
+            <li class="nav-item dropdown">
+                <a href="#" class="nav-link has-dropdown"><i class="fas fa-hands-helping"></i> <span>Donation</span></a>
+                <ul class="dropdown-menu">
+                    <li><a class="nav-link" href="{{route('book.create')}}">Book Donation</a></li>
+                    <li><a class="nav-link" href="{{route('bookshelves.create')}}">Bookshelves Donation</a></li>
+
+                </ul>
+            </li>
+            @endif
+
+            @if (auth()->user()->level == "admin")
             <li class="nav-item dropdown">
                 <a href="#" class="nav-link has-dropdown"><i class="fas fa-info-circle"></i> <span>Manage Information Center</span></a>
                 <ul class="dropdown-menu">
