@@ -31,7 +31,7 @@ class CategoryController extends Controller
             if (Gate::allows('manage-categories')) return $next($request);
             abort(403, 'Anda tidak memiliki cukup hak akses');
         });
-        $categories = \App\Models\Category::paginate(10);
+        $categories = \App\Models\Category::simplePaginate(10);
         return view('categories.index', ['categories' => $categories]);
     }
 
@@ -55,7 +55,7 @@ class CategoryController extends Controller
     {
         // Validasi
         \Validator::make($request->all(), [
-            "name" => "required|min:5|max:20",
+            "name" => "required|min:5|max:26",
             "deskripsi" => "required|min:10",
             "sinopsis" => "required|min:12",
         ])->validate();
@@ -146,6 +146,8 @@ class CategoryController extends Controller
         $category = \App\Models\Category::findOrFail($id);
         $category->name = $name;
         $category->slug = $slug;
+        $category->deskripsi = $request->get('deskripsi');
+        $category->sinopsis = $request->get('sinopsis');
         if ($request->file('image')) {
             if ($category->image && file_exists(storage_path('app/public/' .
                 $category->image))) {

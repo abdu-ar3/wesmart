@@ -7,12 +7,18 @@
     <form action="{{route('categories.update', [$category->id])}}" enctype="multipart/form-data" method="POST" class="bg-white shadow-sm p-3">
         @csrf
         <input type="hidden" value="PUT" name="_method">
-        <label>Category name</label> <br>
+        <label>Category Name</label> <br>
         <input type="text" class="form-control" value="{{$category->name}}" name="name">
         <br><br>
-        <label>Cateogry slug</label>
-        <input type="text" class="form-control" value="{{$category->slug}}" name="slug">
+
+        <label>Cateogry Description</label>
+        <textarea input type="text" class="form-control" value="{{$category->deskripsi}}" name="deskripsi"></textarea>
         <br><br>
+
+        <label>Cateogry sinopsis</label>
+        <textarea input type="text" class="form-control" value="{{$category->sinopsis}}" name="sinopsis"></textarea>
+        <br><br>
+
         <label>Category image</label><br>
         @if($category->image)
         <span>Current image</span><br>

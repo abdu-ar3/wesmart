@@ -13,7 +13,7 @@ class Digital_readController extends Controller
      */
     public function index()
     {
-        $digital_reads = \App\Models\Digital_read::paginate(10);
+        $digital_reads = \App\Models\Digital_read::paginate(16);
         return view('digital_reads.index', ['digital_reads' => $digital_reads]);
     }
 

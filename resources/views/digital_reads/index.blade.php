@@ -53,7 +53,7 @@
                     </div>
                     <p>Author: {{ $digital_read->author }}</p>
                     <p>Publisher: {{ $digital_read->publisher }}</p>
-                    <!-- <p>{{ $digital_read->description }}</p> -->
+                    <!-- <p>Publisher: {{ $digital_read->category_id }}</p> -->
                     <div class="article-cta">
                         @if (auth()->user()->level == "admin")
                         <a class="btn btn-info text-white btn-sm" href="{{route('digital_reads.edit', [$digital_read->id])}}">Edit</a>
