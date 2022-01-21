@@ -19,29 +19,7 @@
         <br>
 
         <label for="username">Username</label>
-        <input value="{{$user->username}}" disabled class="form-control" placeholder="username" type="text" name="username" id="username" />
-        <br>
-
-        <!-- Status -->
-        <label for="">Status</label>
-        <br>
-        <label for="active">Active</label><br>
-        <input {{$user->status == "ACTIVE" ? "checked" : ""}} value="ACTIVE" type="radio" class="form-control" id="active" name="status">
-        <label for="inactive">Inactive</label>
-        <input {{$user->status == "INACTIVE" ? "checked" : ""}} value="INACTIVE" type="radio" class="form-control" id="inactive" name="status">
-
-        <br><br>
-
-        <!-- Roles -->
-        <label for="">Roles</label>
-        <br>
-        <input type="checkbox" {{in_array("ADMIN", json_decode($user->roles)) ?
-"checked" : ""}} name="roles[]" id="ADMIN" value="ADMIN">
-        <label for="ADMIN">Admin</label>
-        <input type="checkbox" {{in_array("STAFF", json_decode($user->roles)) ?
-"checked" : ""}} name="roles[]" id="STAFF" value="STAFF">
-        <label for="STAFF">User</label>
-        <br>
+        <input value="{{$user->username}}" class="form-control" placeholder="username" type="text" name="username" id="username" />
         <br>
 
         <label for="phone">Phone number</label>
@@ -54,6 +32,7 @@
         <br>
         <label for="avatar">Avatar image</label>
         <br>
+
         Current avatar: <br>
         @if($user->avatar)
         <img src="{{asset('storage/'.$user->avatar)}}" width="120px" />
@@ -70,6 +49,10 @@
 
         <label for="email">Email</label>
         <input value="{{$user->email}}" disabled class="form-control" placeholder="user@mail.com" type="text" name="email" id="email" />
+        <br>
+
+        <label for="level">Level (Tidak perlu diubah)</label>
+        <input value="{{$user->level}}" placeholder="user" class="form-control" type="text" name="level" id="level" />
         <br>
 
         <input class="btn btn-primary" type="submit" value="Save" />

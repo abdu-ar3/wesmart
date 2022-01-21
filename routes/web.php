@@ -61,6 +61,8 @@ Route::resource("users", UserController::class);
 Route::resource('tbm', TbmController::class);
 
 // Route Digital Read
+Route::get('/digital_reads/read_student', [App\Http\Controllers\Digital_readController::class, 'read_student'])->name('read_student');
+Route::get('/digital_reads/category_ebook', [App\Http\Controllers\Digital_readController::class, 'category_ebook'])->name('category_ebook');
 Route::resource('digital_reads', Digital_readController::class);
 
 // Rute Trash

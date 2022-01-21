@@ -29,9 +29,11 @@
             <br><br>
             <b>Address</b> <br>
             {{$user->address}}
-            <br>
+            <br><br>
             <b>Level:</b> <br />
-            {{$user->level}}
+            {{$user->level}} <br><br>
+
+            <a class="btn btn-info text-white btn-sm" href="{{route('users.edit', [$user->id])}}">Edit Profile</a>
 
             <footer class="blockquote-footer">Budayakan baca <cite title="Source Title">Menjadi Habit</cite></footer>
         </blockquote>

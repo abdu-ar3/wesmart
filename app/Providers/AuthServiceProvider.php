@@ -25,39 +25,5 @@ class AuthServiceProvider extends ServiceProvider
     public function boot()
     {
         $this->registerPolicies();
-
-        Gate::define('manage-users', function ($user) {
-            return count(array_intersect(["ADMIN"], json_decode($user->roles)));
-        });
-        Gate::define('manage-categories', function ($user) {
-            return count(array_intersect(
-                ["ADMIN"],
-                json_decode($user->roles)
-            ));
-        });
-        Gate::define('manage-book', function ($user) {
-            return count(array_intersect(
-                ["ADMIN"],
-                json_decode($user->roles)
-            ));
-        });
-        Gate::define('manage-bookshelves', function ($user) {
-            return count(array_intersect(
-                ["ADMIN"],
-                json_decode($user->roles)
-            ));
-        });
-        Gate::define('manage-tbm', function ($user) {
-            return count(array_intersect(
-                ["ADMIN"],
-                json_decode($user->roles)
-            ));
-        });
-        Gate::define('manage-event', function ($user) {
-            return count(array_intersect(
-                ["ADMIN"],
-                json_decode($user->roles)
-            ));
-        });
     }
 }

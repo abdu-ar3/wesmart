@@ -16,7 +16,6 @@
                 <a href="#" class="nav-link has-dropdown"><i class="fas fa-fire"></i><span>Dashboard</span></a>
                 <ul class="dropdown-menu">
                     <li><a class="nav-link" href="{{route('dashboard')}}">Dashboard Front</a></li>
-                    <li><a class="nav-link" href="index-0.html">Index Baca</a></li>
                 </ul>
             </li>
 
@@ -44,11 +43,12 @@
             <li class="nav-item dropdown">
                 <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="fas fa-book-open"></i> <span>Manage Digital Reads</span></a>
                 <ul class="dropdown-menu">
-                    <li><a class="nav-link" href="{{route('digital_reads.index')}}">Reads Student</a></li>
+                    <li><a class="nav-link" href="{{route('digital_reads.index')}}">Category E-Books</a></li>
+                    <li><a class="nav-link" href="{{route('read_student')}}">Reads Student</a></li>
                 </ul>
                 @if (auth()->user()->level == "admin")
                 <ul class="dropdown-menu">
-                    <li><a class="nav-link" href="{{route('categories.index')}}">Category</a></li>
+                    <li><a class="nav-link" href="{{route('categories.index')}}">Category List</a></li>
                 </ul>
                 @endif
             </li>

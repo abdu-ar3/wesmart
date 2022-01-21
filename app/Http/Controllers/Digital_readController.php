@@ -13,8 +13,8 @@ class Digital_readController extends Controller
      */
     public function index()
     {
-        $digital_reads = \App\Models\Digital_read::paginate(16);
-        return view('digital_reads.index', ['digital_reads' => $digital_reads]);
+        $categories = \App\Models\Category::simplePaginate(10);
+        return view('digital_reads.index', ['categories' => $categories]);
     }
 
     /**
@@ -123,5 +123,18 @@ class Digital_readController extends Controller
         $digital_reads = \App\Models\Digital_read::findOrFail($id);
         $digital_reads->delete();
         return redirect()->route('digital_reads.index')->with('status', 'Data E-Books successfully deleted');
+    }
+
+    public function read_student()
+    {
+
+        $digital_reads = \App\Models\Digital_read::paginate(16);
+        return view('digital_reads.reads', ['digital_reads' => $digital_reads]);
+    }
+
+    public function category_ebook()
+    {
+        // $digital_reads = \App\Models\Digital_read::paginate(16);
+        // return view('digital_reads.reads', ['digital_reads' => $digital_reads]);
     }
 }
