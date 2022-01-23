@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Digital_read;
 use Illuminate\Http\Request;
 
 class Digital_readController extends Controller
@@ -59,7 +60,7 @@ class Digital_readController extends Controller
         $new_digital_read->save();
         if ($request->get('save_action') == 'PUBLISH') {
             return redirect()
-                ->route('digital_reads.index')
+                ->route('digital_reads.reads')
                 ->with('status', 'E-Book successfully saved and published');
         } else {
             return redirect()
@@ -76,8 +77,11 @@ class Digital_readController extends Controller
      */
     public function show($id)
     {
-        $digital_reads = \App\Models\Digital_read::findOrFail($id);
-        return view('digital_reads.show', ['digital_reads' => $digital_reads]);
+        // $digital_reads = \App\Models\Digital_read::where('category_id', $id);
+
+        $categories = \App\Models\Category::findOrFail($id);
+        return view('digital_reads.category_ebook', compact('categories'));
+        // return $categories;
     }
 
     /**
@@ -132,11 +136,14 @@ class Digital_readController extends Controller
         return view('digital_reads.reads', ['digital_reads' => $digital_reads]);
     }
 
-    public function category_ebook()
+    public function category_ebook($id)
     {
+        $digital_reads = \App\Models\Digital_read::findOrFail($id);
+        $digital_reads->category_id = Digital_read::get('category_id');
+        return view('digital_reads.category_ebook', compact('digital_reads'));
         // $categories = \App\Models\Category::simplePaginate(10);
         // return view('digital_reads.category_ebook', ['categories' => $categories]);
-        $digital_reads = \App\Models\Digital_read::paginate(16);
-        return view('digital_reads.category_ebook', ['digital_reads' => $digital_reads]);
+        // $digital_reads = \App\Models\Digital_read::paginate(16);
+        // return view('digital_reads.category_ebook', ['digital_reads' => $digital_reads]);
     }
 }

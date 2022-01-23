@@ -13,17 +13,20 @@ class CreateDigitalReadsTable extends Migration
      */
     public function up()
     {
+
         Schema::create('digital_reads', function (Blueprint $table) {
             $table->id();
             $table->string('title');
+            $table->foreignId('category_id')->constrained('categories')->onUpdate('cascade')->onDelete('cascade');
             $table->string('slug');
             $table->text('description');
             $table->string('author');
             $table->string('publisher');
             $table->string('cover');
+            $table->string('file_pdf');
             $table->integer('views')->default(0)->unsigned();
             $table->enum('status', ['PUBLISH', 'DRAFT']);
-            $table->integer('created_by');
+            $table->integer('created_by')->nullable();
             $table->integer('updated_by')->nullable();
             $table->integer('deleted_by')->nullable();
             $table->timestamps();

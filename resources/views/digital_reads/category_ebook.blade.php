@@ -1,5 +1,5 @@
 @extends('layouts.global')
-@section('title') Books list @endsection
+@section('title') E-Books @endsection
 
 
 @section('content')
@@ -24,24 +24,26 @@
     </div>
 
     <!-- Title -->
-    <h2 class="section-title">E-Books Category</h2>
+    <h2 class="section-title">Category
+        {{ $categories->name }}
+    </h2>
 
     <!-- Create -->
     @if (auth()->user()->level == "admin")
     <div class="row mb-3">
         <div class="col-md-12 text-right">
-            <a href="{{route('digital_reads.create')}}" class="btn btn-primary">Create List</a>
+            <a href="{{route('digital_reads.create')}}" class="btn btn-primary">Create E-Books</a>
         </div>
     </div>
     @endif
 
 
     <div class="row">
-        @foreach($digital_reads as $digital_read)
+        @foreach ($categories->digital_read as $data)
         <div class="col-12 col-sm-6 col-md-6 col-lg-3">
             <article class="article article-style-b">
                 <div class="article-header">
-                    <div class="article-image" data-background="http://localhost/wesmart1/storage/app/public/{{ $digital_read->cover }}">
+                    <div class="article-image" data-background="http://localhost/wesmart1/storage/app/public/{{ $data->cover }}">
                     </div>
                     <div class="article-badge">
                         <div class="article-badge-item bg-danger"><i class="fas fa-fire"></i> Trending</div>
@@ -49,24 +51,14 @@
                 </div>
                 <div class="article-details">
                     <div class="article-title">
-                        <h2><a href="#">{{ $digital_read->categories }}</a></h2>
+                        <h2><a href="#">{{ $data->title }}</a></h2>
                     </div>
-                    <p>Author: {{ $digital_read->author }}</p>
-                    <p>Publisher: {{ $digital_read->publisher }}</p>
-                    <!-- <p>Publisher: {{ $digital_read->category_id }}</p> -->
+                    <p>Author: {{ $data->author }}</p>
+                    <p>Publisher: {{ $data->publisher }}</p>
+                    <!-- <p>Publisher: {{ $data->category_id }}</p> -->
                     <div class="article-cta">
-                        @if (auth()->user()->level == "admin")
-                        <a class="btn btn-info text-white btn-sm" href="{{route('digital_reads.edit', [$digital_read->id])}}">Edit</a>
-                        @endif
-                        <input type="hidden" id="file_pdf" value="http://localhost/wesmart1/storage/app/public/{{ $digital_read->file_pdf }}">
+                        <input type="hidden" id="file_pdf" value="http://localhost/wesmart1/storage/app/public/{{ $data->file_pdf }}">
                         <a href="#" class="btn btn-primary" onclick="showModal(this)">Read Now</a>
-                        @if (auth()->user()->level == "admin")
-                        <form onsubmit="return confirm('Delete this TBM permanently?')" class="d-inline" action="{{route('digital_reads.destroy', [$digital_read->id])}}" method="POST">
-                            @csrf
-                            <input type="hidden" name="_method" value="DELETE">
-                            <input type="submit" value="Delete" class="btn btn-danger btn-sm">
-                        </form>
-                        @endif
                     </div>
                 </div>
             </article>

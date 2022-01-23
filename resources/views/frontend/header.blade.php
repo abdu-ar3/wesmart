@@ -32,7 +32,7 @@
 
                 <div class="collapse navbar-collapse" id="navigation">
                     <ul class="navbar-nav ml-auto text-center menulist">
-                        <li class="nav-item @@home active">
+                        <li class="nav-item @@home">
                             <a class="nav-link" href="{{route('dashboard')}}">Home</a>
                         </li>
                         <li class="nav-item @@@about">

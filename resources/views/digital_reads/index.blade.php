@@ -30,7 +30,7 @@
     @if (auth()->user()->level == "admin")
     <div class="row mb-3">
         <div class="col-md-12 text-right">
-            <a href="{{route('digital_reads.create')}}" class="btn btn-primary">Create List</a>
+            <a href="{{route('categories.create')}}" class="btn btn-primary">Create Category</a>
         </div>
     </div>
     @endif
@@ -51,7 +51,7 @@
                     <div class="article-title">
                         <h2><a href="#">{{$category->name}}</a></h2>
                     </div>
-                    <a class="btn btn-primary btn-sm" href="{{route('category_ebook', [$category->id])}}">SHOW</a>
+                    <a class="btn btn-primary btn-sm" href="{{route('digital_reads.show', [$category->id])}}">SHOW</a>
                 </div>
             </article>
         </div>

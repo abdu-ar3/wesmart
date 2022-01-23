@@ -36,7 +36,7 @@
 
         <div class="row mb-3">
             <div class="col-md-12 text-right">
-                <a href="{{route('categories.create')}}" class="btn btn-primary">Create List</a>
+                <a href="{{route('categories.create')}}" class="btn btn-primary">Create Category</a>
             </div>
         </div>
 

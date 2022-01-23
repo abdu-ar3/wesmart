@@ -11,8 +11,9 @@ class Category extends Model
     use HasFactory;
     use SoftDeletes;
 
-    public function digital_reads()
+
+    public function digital_read()
     {
-        return $this->belongsToMany('App\Models\Digital_read');
+        return $this->hasMany(Digital_read::class);
     }
 }

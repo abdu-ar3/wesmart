@@ -19,7 +19,7 @@ class CreateTbmsTable extends Migration
             $table->string("alamat");
             $table->string("nama_pengelola");
             $table->string("no_telpon")->nullable();
-            $table->integer("created_by");
+            $table->integer("created_by")->nullable();
             $table->integer("updated_by")->nullable();
             $table->integer("deleted_by")->nullable();
             $table->softDeletes();
