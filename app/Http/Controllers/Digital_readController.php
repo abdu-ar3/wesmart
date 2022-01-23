@@ -134,7 +134,9 @@ class Digital_readController extends Controller
 
     public function category_ebook()
     {
-        // $digital_reads = \App\Models\Digital_read::paginate(16);
-        // return view('digital_reads.reads', ['digital_reads' => $digital_reads]);
+        // $categories = \App\Models\Category::simplePaginate(10);
+        // return view('digital_reads.category_ebook', ['categories' => $categories]);
+        $digital_reads = \App\Models\Digital_read::paginate(16);
+        return view('digital_reads.category_ebook', ['digital_reads' => $digital_reads]);
     }
 }
