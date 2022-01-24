@@ -11,9 +11,19 @@ class TbmController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        $tbm = \App\Models\Tbm::simplePaginate(10);
+        $tbm = \App\Models\Tbm::simplePaginate(12);
+        $filterKeyword = $request->get('name');
+        if ($filterKeyword) {
+            $tbm = \App\Models\Tbm::where(
+                "nama_tbm",
+                "LIKE",
+                "%$filterKeyword%"
+            )
+                ->orWhere("nama_pengelola", "LIKE", "%$filterKeyword%")
+                ->simplePaginate(16);
+        }
         return view('tbm.index', ['tbms' => $tbm]);
     }
 

@@ -129,10 +129,21 @@ class Digital_readController extends Controller
         return redirect()->route('digital_reads.index')->with('status', 'Data E-Books successfully deleted');
     }
 
-    public function read_student()
+    public function read_student(Request $request)
     {
+        $digital_reads = \App\Models\Digital_read::simplePaginate(16);
+        $filterKeyword = $request->get('name');
+        if ($filterKeyword) {
+            $digital_reads = \App\Models\Digital_read::where(
+                "title",
+                "LIKE",
+                "%$filterKeyword%"
+            )->orWhere("author", "LIKE", "%$filterKeyword%")
+                ->orWhere("publisher", "LIKE", "%$filterKeyword%")
+                ->simplePaginate(16);
+        }
 
-        $digital_reads = \App\Models\Digital_read::paginate(16);
+        // $digital_reads = \App\Models\Digital_read::paginate(16);
         return view('digital_reads.reads', ['digital_reads' => $digital_reads]);
     }
 

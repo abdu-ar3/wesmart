@@ -5,6 +5,20 @@
 @section("content")
 
 <div class="col-md-12">
+    <div class="row">
+        <div class="col-md-6">
+            <form action="{{route('tbm.index')}}">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Filter Profile TBM by Name and Manager Name" name="name">
+                    <div class="input-group-append">
+                        <input type="submit" value="Filter" class="btn btn-primary">
+                    </div>
+                </div>
+
+            </form>
+        </div>
+    </div>
+    <hr class="my-3">
 
     <!-- Message -->
     @if(session('status'))
@@ -15,6 +29,9 @@
 
 
     <form enctype="multipart/form-data" class="bg-white shadow-sm p-3">
+
+        <!-- fILter Search -->
+
 
         <!-- Title -->
         <h4>Taman Bacaan List</h4>

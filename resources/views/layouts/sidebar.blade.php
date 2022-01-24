@@ -39,21 +39,38 @@
             </li>
             @endif
 
+            <!-- User Views -->
+            @if (auth()->user()->level == "user")
+            <li class="nav-item dropdown">
+                <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="fas fa-book"></i> <span>Profile TBM</span></a>
+                <ul class="dropdown-menu">
+                    <li><a class="nav-link" href="{{route('tbm.index')}}">Profile</a></li>
+                </ul>
+            </li>
 
+
+            <li class="nav-item dropdown">
+                <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="fas fa-book-open"></i> <span>Digital Reads</span></a>
+                <ul class="dropdown-menu">
+                    <li><a class="nav-link" href="{{route('digital_reads.index')}}">Category E-Books</a></li>
+                    <li><a class="nav-link" href="{{route('read_student')}}">Reads Student</a></li>
+                </ul>
+            </li>
+            @endif
+
+            <!-- Manage to Admin -->
+            @if (auth()->user()->level == "admin")
             <li class="nav-item dropdown">
                 <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="fas fa-book-open"></i> <span>Manage Digital Reads</span></a>
                 <ul class="dropdown-menu">
                     <li><a class="nav-link" href="{{route('digital_reads.index')}}">Category E-Books</a></li>
                     <li><a class="nav-link" href="{{route('read_student')}}">Reads Student</a></li>
                 </ul>
-                @if (auth()->user()->level == "admin")
                 <ul class="dropdown-menu">
                     <li><a class="nav-link" href="{{route('categories.index')}}">Category List</a></li>
                 </ul>
-                @endif
             </li>
 
-            @if (auth()->user()->level == "admin")
             <li class=" menu-header">PAGES</li>
             <li class="nav-item dropdown">
                 <a href="#" class="nav-link has-dropdown"><i class="fas fa-hands-helping"></i> <span>Manage Help Facilities</span></a>
@@ -62,8 +79,8 @@
                     <li><a class="nav-link" href="{{route('bookshelves.index')}}">Bookshelves</a></li>
                 </ul>
             </li>
-
             @endif
+
             @if (auth()->user()->level == "user")
             <li class=" menu-header">PAGES</li>
             <li class="nav-item dropdown">

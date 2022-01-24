@@ -26,6 +26,28 @@
     <!-- Title -->
     <h2 class="section-title">E-Books All</h2>
 
+    <!-- fILter Search -->
+    <div class="row">
+        <div class="col-md-6">
+            <form action="{{route('read_student')}}">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Filter e-book by title, author dan publisher" name="name">
+                    <div class="input-group-append">
+                        <input type="submit" value="Filter" class="btn btn-primary">
+                    </div>
+                </div>
+
+            </form>
+        </div>
+    </div>
+    <hr class="my-3">
+
+    <!-- <div class="search-element">
+        <input class="form-control" type="search" placeholder="Search" aria-label="Search" data-width="250">
+        <button class="btn" type="submit"><i class="fas fa-search"></i></button>
+        <div class="search-backdrop"></div>
+    </div> -->
+
     <!-- Create -->
     @if (auth()->user()->level == "admin")
     <div class="row mb-3">
