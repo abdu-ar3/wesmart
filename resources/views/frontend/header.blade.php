@@ -31,11 +31,11 @@
                 </button>
 
                 <div class="collapse navbar-collapse" id="navigation">
-                    <ul class="navbar-nav ml-auto text-center menulist">
-                        <li class="nav-item @@home">
+                    <ul class="navbar-nav ml-auto text-center">
+                        <li class="nav-item active">
                             <a class="nav-link" href="{{route('dashboard')}}">Home</a>
                         </li>
-                        <li class="nav-item @@@about">
+                        <li class="nav-item @@about">
                             <a class="nav-link" href="{{route('ftbm')}}">Profile TBM</a>
                         </li>
                         <li class="nav-item @@courses">
