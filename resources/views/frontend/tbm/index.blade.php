@@ -3,6 +3,7 @@
 
 <head>
     <meta charset="utf-8">
+    <link rel="icon" href="{{asset('assets/img/icon/forumtbm.jpg')}}">
     <title>WeSmart @yield("title")</title>
 
     <!-- mobile responsive meta -->
