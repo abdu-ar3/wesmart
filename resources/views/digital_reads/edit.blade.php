@@ -32,6 +32,9 @@
         <input type="text" name="publisher" class="form-control" value="{{$digital_read->publisher}}">
         <br>
 
+        <label for="cover">Cover</label>
+        <input type="file" class="form-control" name="cover">
+        <br>
         <input class="btn btn-primary" type="submit" value="Save" />
     </form>
 </div>

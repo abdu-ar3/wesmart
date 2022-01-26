@@ -41,12 +41,16 @@
         </div>
         <br>
 
-        <label for="phone">Phone number</label>
+        <!-- Phone -->
+        <label for="phone">Phone Number</label>
+        <input class="form-control {{$errors->first('phone') ? "is-invalid" : ""}}" placeholder="Ketikan No Handphone" type="text" name="phone" id="phone" />
+        <div class="invalid-feedback">
+            {{$errors->first('phone')}}
+        </div>
         <br>
-        <input type="text" name="phone" class="form-control">
-        <br>
+
         <label for="address">Address</label>
-        <textarea name="address" id="address" class="form-control"></textarea>
+        <textarea name="address" id="address" class="form-control" placeholder="Ketikan Alamat"></textarea>
         <br>
         <label for="avatar">Avatar image</label>
         <br>

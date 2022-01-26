@@ -1,5 +1,8 @@
 @extends('layouts.app')
 
+@section("title")Register @endsection
+<link rel="icon" href="{{asset('assets/img/icon/forumtbm.jpg')}}">
+
 @section('content')
 
 <br>

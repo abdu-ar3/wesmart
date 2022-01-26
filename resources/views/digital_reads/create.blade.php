@@ -15,30 +15,51 @@
         <form action="{{route('digital_reads.store')}}" method="POST" enctype="multipart/form-data" class="shadow-sm p-3 bg-white">
             @csrf
             <label for="title">Title</label> <br>
-            <input type="text" class="form-control" name="title" placeholder="Book title">
+            <input value="{{old('title')}}" class="form-control {{$errors->first('title')? "is-invalid": ""}}" placeholder="E-Book title" type="text" name="title" id="title" />
+            <div class="invalid-feedback">
+                {{$errors->first('title')}}
+            </div>
             <br>
+
             <label for="cover">Cover</label>
             <input type="file" class="form-control" name="cover">
             <br>
-            <label for="file_pdf">File PDF</label>
-            <input type="file" class="form-control" name="file_pdf">
+
+            <label for="file_pdf">File PDF</label> <br>
+            <input value="{{old('file_pdf')}}" class="form-control {{$errors->first('file_pdf')? "is-invalid": ""}}" type="file" name="file_pdf" id="file_pdf" />
+            <div class="invalid-feedback">
+                {{$errors->first('file_pdf')}}
+            </div>
             <br>
-            <label for="category">Category</label>
-            <select name="category" id="category" class="form-control">
-                <option value=""></option>
+
+            <label for="category">Category E-Books</label> <br>
+            <select value="{{old('category')}}" class="form-control {{$errors->first('category')? "is-invalid": ""}}" name="category" id="category" />
+            <option value=""></option>
             </select>
+            <div class="invalid-feedback">
+                {{$errors->first('category')}}
+            </div>
             <br>
+
             <label for="description">Description</label><br>
             <textarea name="description" id="description" class="form-control" placeholder="Give a description about this book"></textarea>
             <br>
-            <label for="author">Author</label><br>
-            <input type="text" class="form-control" name="author" id="author" placeholder="Book author">
+
+            <label for="author">Author</label> <br>
+            <input value="{{old('author')}}" class="form-control {{$errors->first('author')? "is-invalid": ""}}" placeholder="E-Book author" type="text" name="author" id="author" />
+            <div class="invalid-feedback">
+                {{$errors->first('author')}}
+            </div>
             <br>
+
             <label for="publisher">Publisher</label> <br>
-            <input type="text" class="form-control" id="publisher" name="publisher" placeholder="Book publisher">
+            <input value="{{old('publisher')}}" class="form-control {{$errors->first('publisher')? "is-invalid": ""}}" placeholder="E-Book publisher" type="text" name="publisher" id="publisher" />
+            <div class="invalid-feedback">
+                {{$errors->first('publisher')}}
+            </div>
             <br>
+
             <button class="btn btn-primary" name="save_action" value="PUBLISH">Publish</button>
-            <button class="btn btn-secondary" name="save_action" value="DRAFT">Save as draft</button>
         </form>
     </div>
 </div>

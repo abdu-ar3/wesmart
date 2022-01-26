@@ -42,7 +42,8 @@ class UserController extends Controller
             "name" => "required|min:4|max:100",
             "username" => "required|min:4|max:20",
             "email" => "required|email",
-            "password" => "required",
+            "phone" => "required|min:12|max:13",
+            "password" => "required|min:8",
             "password_confirmation" => "required|same:password"
         ])->validate();
 

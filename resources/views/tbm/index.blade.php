@@ -30,17 +30,19 @@
 
     <form enctype="multipart/form-data" class="bg-white shadow-sm p-3">
 
-        <!-- fILter Search -->
-
 
         <!-- Title -->
         <h4>Taman Bacaan List</h4>
 
+        <!-- Admin Akses -->
+        @if (auth()->user()->level == "admin")
         <div class="row mb-3">
             <div class="col-md-12 text-right">
                 <a href="{{route('tbm.create')}}" class="btn btn-primary">Create TBM</a>
             </div>
         </div>
+        @endif
+
 
         <!-- Table -->
         <table class="table table-striped">
@@ -64,13 +66,20 @@
                     <td>{{$tbm->nama_pengelola}}</td>
                     <td>{{$tbm->no_telpon}}</td>
                     <td>
+                        @if (auth()->user()->level == "admin")
                         <a class="btn btn-info text-white btn-sm" href="{{route('tbm.edit', [$tbm->id])}}">Edit</a>
+                        @endif
+
                         <a href="{{route('tbm.show', [$tbm->id])}}" class="btn btn-primary btn-sm"> Show </a>
+
+
+                        @if (auth()->user()->level == "admin")
                         <form onsubmit="return confirm('Delete this TBM permanently?')" class="d-inline" action="{{route('tbm.destroy', [$tbm->id])}}" method="POST">
                             @csrf
                             <input type="hidden" name="_method" value="DELETE">
                             <input type="submit" value="Delete" class="btn btn-danger btn-sm">
                         </form>
+                        @endif
                     </td>
                 </tr>
                 @endforeach

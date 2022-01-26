@@ -52,7 +52,7 @@
     @if (auth()->user()->level == "admin")
     <div class="row mb-3">
         <div class="col-md-12 text-right">
-            <a href="{{route('digital_reads.create')}}" class="btn btn-primary">Create List</a>
+            <a href="{{route('digital_reads.create')}}" class="btn btn-primary">Create E-Book</a>
         </div>
     </div>
     @endif

@@ -33,7 +33,7 @@
                             <label for="name">Name</label>
                             <input value="{{old('name')}}" class="form-control {{$errors->first('name')? "is-invalid": ""}}" placeholder="Ketikan name" type="text" name="name" id="name" />
                             <div class="invalid-feedback">
-                                {{$errors->first('Name')}}
+                                {{$errors->first('name')}}
                             </div>
                             <br>
 
@@ -54,7 +54,7 @@
                             <label for="alamat">Address</label>
                             <input value="{{old('alamat')}}" class="form-control {{$errors->first('alamat')? "is-invalid": ""}}" placeholder="Ketikan alamat" type="text" name="alamat" id="alamat" />
                             <div class="invalid-feedback">
-                                {{$errors->first('Address')}}
+                                {{$errors->first('alamat')}}
                             </div>
                             <br>
 
@@ -63,7 +63,7 @@
                             <label for="pekerjaan">Profession</label>
                             <input value="{{old('pekerjaan')}}" class="form-control {{$errors->first('pekerjaan')? "is-invalid": ""}}" placeholder="Ketikan pekerjaan" type="text" name="pekerjaan" id="pekerjaan" />
                             <div class="invalid-feedback">
-                                {{$errors->first('Profession')}}
+                                {{$errors->first('pekerjaan')}}
                             </div>
                             <br>
 
@@ -71,7 +71,7 @@
                             <label for="instansi">Instance</label>
                             <input value="{{old('instansi')}}" class="form-control {{$errors->first('instansi')? "is-invalid": ""}}" placeholder="Ketikan instansi" type="text" name="instansi" id="instansi" />
                             <div class="invalid-feedback">
-                                {{$errors->first('Instance')}}
+                                {{$errors->first('instansi')}}
                             </div>
                             <br>
 
@@ -114,7 +114,7 @@
                                     </div>
                                     <input value="{{old('tanggal_pengiriman')}}" class="form-control {{$errors->first('tanggal_pengiriman')? "is-invalid": ""}}" placeholder="Ketikan tanggal_pengiriman" type="text" name="tanggal_pengiriman" id="tanggal_pengiriman" />
                                     <div class="invalid-feedback">
-                                        {{$errors->first('Delivery Date')}}
+                                        {{$errors->first('tanggal_pengiriman')}}
                                     </div>
                                 </div>
                             </div>

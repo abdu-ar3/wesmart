@@ -36,6 +36,15 @@ class Digital_readController extends Controller
      */
     public function store(Request $request)
     {
+        // Validasi
+        \Validator::make($request->all(), [
+            "title" => "required|min:5|max:24",
+            "author" => "required|min:3|max:24",
+            "publisher" => "required|min:3|max:24",
+            "file_pdf" => "required",
+            "category" => "required",
+        ])->validate();
+
         $new_digital_read = new \App\Models\Digital_read();
         $new_digital_read->title = $request->get('title');
         $new_digital_read->description = $request->get('description');
@@ -60,7 +69,7 @@ class Digital_readController extends Controller
         $new_digital_read->save();
         if ($request->get('save_action') == 'PUBLISH') {
             return redirect()
-                ->route('digital_reads.reads')
+                ->route('read_student')
                 ->with('status', 'E-Book successfully saved and published');
         } else {
             return redirect()
@@ -110,10 +119,14 @@ class Digital_readController extends Controller
         $digital_reads->title = $request->get('title');
         $digital_reads->author = $request->get('author');
         $digital_reads->publisher = $request->get('publisher');
+        if ($request->file('cover')) {
+            $file = $request->file('cover')->store('pdf_cover', 'public');
+            $digital_reads->cover = $file;
+        }
 
         $digital_reads->save();
 
-        return redirect()->route('digital_reads.index', [$id])->with('status', 'Data E-Book succesfully updated');
+        return redirect()->route('read_student', [$id])->with('status', 'Data E-Book succesfully updated');
     }
 
     /**
@@ -126,7 +139,7 @@ class Digital_readController extends Controller
     {
         $digital_reads = \App\Models\Digital_read::findOrFail($id);
         $digital_reads->delete();
-        return redirect()->route('digital_reads.index')->with('status', 'Data E-Books successfully deleted');
+        return redirect()->route('read_student')->with('status', 'Data E-Books successfully deleted');
     }
 
     public function read_student(Request $request)
