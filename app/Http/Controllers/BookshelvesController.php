@@ -38,6 +38,7 @@ class BookshelvesController extends Controller
         // Validasi
         \Validator::make($request->all(), [
             "name" => "required|min:5|max:20",
+            "phone_number" => "required|digits:12|max:13",
             "addres" => "required|min:5",
             "profesion" => "required|min:4",
             "instance" => "required|min:4",
@@ -57,7 +58,7 @@ class BookshelvesController extends Controller
         $new_bookshelves->delivery_date = $request->get('delivery_date');
 
         $new_bookshelves->save();
-        return view('bookshelfs.thanks');
+        return view('bookshelves.thanks');
     }
 
     /**

@@ -37,17 +37,13 @@
                             </div>
                             <br>
 
-                            <div class="form-group">
-                                <label>Phone Number</label>
-                                <div class="input-group">
-                                    <div class="input-group-prepend">
-                                        <div class="input-group-text">
-                                            <i class="fas fa-phone"></i>
-                                        </div>
-                                    </div>
-                                    <input type="text" name="phone_number" class="form-control phone-number" placeholder="Masukan No Telpon">
-                                </div>
+                            <!-- Phone Number -->
+                            <label for="addres">Phone Number</label>
+                            <input value="{{old('phone_number')}}" class="form-control {{$errors->first('phone_number')? "is-invalid": ""}}" placeholder="Ketikan alamat" type="text" name="phone_number" id="phone_number" />
+                            <div class="invalid-feedback">
+                                {{$errors->first('phone_number')}}
                             </div>
+                            <br>
 
                             <!-- Address -->
                             <label for="addres">Address</label>

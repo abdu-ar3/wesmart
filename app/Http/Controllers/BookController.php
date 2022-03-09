@@ -39,6 +39,7 @@ class BookController extends Controller
         // Validasi
         \Validator::make($request->all(), [
             "name" => "required|min:5|max:20",
+            "no_hp" => "required|min:12|max:13",
             "alamat" => "required|min:5",
             "pekerjaan" => "required|min:4",
             "instansi" => "required|min:4",

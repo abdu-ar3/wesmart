@@ -128,8 +128,45 @@
                     <img class="img-fluid w-100" src="{{asset('frontend/images/about/ebook.jpg')}}" alt="about image">
                 </div>
             </div>
+
+            <br><br>
+            <div class="row align-items-center">
+
+                <h2 class="section-title">Visi</h2>
+                <p>The vision of the TBM Forum is to become a center for learning and development
+                    community literacy skills, so that a learning community is formed
+                    empowered and prosperous.</p>
+                <p>Visi Forum TBM adalah menjadi pusat pembelajaran dan pengembangan
+                    kecakapan literasi masyarakat, sehingga terbentuk masyarakat pembelajar
+                    yang berdaya dan sejahtera.</p>
+            </div><br><br>
+
+            <div class="row align-items-center">
+                <h2 class="section-title">Misi</h2>
+                <p>The mission of the TBM Forum is: <br>
+                    a. initiating, facilitating, and developing various businesses
+                    coaching in order to increase the resources of the TBM Forum which
+                    includes organizational structure, infrastructure, collections, and capacity
+                    TBM managers/activists; <br>
+                    b. accommodate, channel the aspirations and initiatives of TBM Forum managers
+                    in an effort to improve the literacy skills of the community; <br>
+                    c. help the success of the illiteracy eradication movement by
+                    make the TBM Forum a means of literacy maintenance
+                    society and the growth of a reading culture.</p>
+                <p>Misi Forum TBM adalah: <br>
+                    a. memprakarsai, memfasilitasi, dan mengembangkan berbagai usaha <br>
+                    pembinaan dalam rangka meningkatkan sumber daya Forum TBM yang
+                    meliputi tata organisasi, sarana prasarana, koleksi, dan kapasitas
+                    pengelola/pegiat TBM; <br>
+                    b. mewadahi, menyalurkan aspirasi, dan prakarsa pengelola Forum TBM
+                    dalam upaya meningkatkan kecakapan literasi masyarakat; <br>
+                    c. membantu keberhasilan gerakan pemberantasan buta aksara dengan
+                    menjadikan Forum TBM sebagai sarana pemeliharaan keaksaraan
+                    masyarakat dan penumbuhan budaya baca.</p>
+            </div>
         </div>
     </section>
+
 
     <div class="container">
         <div class="row align-items-center">

@@ -19,21 +19,6 @@
         <!-- Title -->
         <h4>Categories List</h4>
 
-        <div class="row ">
-            <div class="col-md-6 text-align-center">
-                <ul class="nav nav-pills card-header-pills">
-                    <li class="nav-item">
-                        <a class="nav-link active" href="
-{{route('categories.index')}}">Published</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="
-{{route('categories.trash')}}">Trash</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-
         <div class="row mb-3">
             <div class="col-md-12 text-right">
                 <a href="{{route('categories.create')}}" class="btn btn-primary">Create Category</a>
