@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
-    <link rel="icon" href="{{asset('assets/img/icon/forumtbm.jpg')}}">
+    <link rel="icon" href="{{asset('public/public/assets/img/icon/forumtbm.jpg')}}">
     <title>WeSmart @yield("title")</title>
 
     <!-- General CSS Files -->
@@ -16,9 +16,9 @@
     <!-- Template CSS -->
     <!-- "{{asset('polished/polished.min.css')}} -->
 
-    <!-- <link rel="stylesheet" href="./assets/css/style.css"> -->
-    <link rel="stylesheet" href="{{asset('assets/css/style.css')}}">
-    <link rel="stylesheet" href="{{asset('assets/css/components.css')}}">
+    <!-- <link rel="stylesheet" href="./public/assets/css/style.css"> -->
+    <link rel="stylesheet" href="{{asset('public/assets/css/style.css')}}">
+    <link rel="stylesheet" href="{{asset('public/assets/css/components.css')}}">
     @yield('css-script')
 </head>
 
@@ -48,13 +48,13 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.nicescroll/3.7.6/jquery.nicescroll.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
-    <script src="{{asset('assets/js/stisla.js')}}"></script>
+    <script src="{{asset('public/assets/js/stisla.js')}}"></script>
 
     <!-- JS Libraies -->
 
     <!-- Template JS File -->
-    <script src="{{asset('assets/js/scripts.js')}}"></script>
-    <script src="{{asset('assets/js/custom.js')}}"></script>
+    <script src="{{asset('public/assets/js/scripts.js')}}"></script>
+    <script src="{{asset('public/assets/js/custom.js')}}"></script>
 
     @yield('js-script')
 

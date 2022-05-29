@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <link rel="icon" href="{{asset('assets/img/icon/forumtbm.jpg')}}">
+    <link rel="icon" href="{{asset('public/assets/img/icon/forumtbm.jpg')}}">
     <title>WeSmart @yield("title")</title>
 
     <!-- mobile responsive meta -->
@@ -12,20 +12,20 @@
 
     <!-- ** Plugins Needed for the Project ** -->
     <!-- Bootstrap -->
-    <link rel="stylesheet" href="{{asset('frontend/plugins/bootstrap/bootstrap.min.css')}}">
+    <link rel="stylesheet" href="{{asset('public/frontend/plugins/bootstrap/bootstrap.min.css')}}">
     <!-- slick slider -->
-    <link rel="stylesheet" href="{{asset('frontend/plugins/slick/slick.css')}}">
+    <link rel="stylesheet" href="{{asset('public/frontend/plugins/slick/slick.css')}}">
     <!-- themefy-icon -->
-    <link rel="stylesheet" href="{{asset('frontend/plugins/themify-icons/themify-icons.css')}}">
+    <link rel="stylesheet" href="{{asset('public/frontend/plugins/themify-icons/themify-icons.css')}}">
     <!-- animation css -->
-    <link rel="stylesheet" href="{{asset('frontend/plugins/animate/animate.css')}}">
+    <link rel="stylesheet" href="{{asset('public/frontend/plugins/animate/animate.css')}}">
     <!-- aos -->
-    <link rel="stylesheet" href="{{asset('frontend/plugins/aos/aos.css')}}">
+    <link rel="stylesheet" href="{{asset('public/frontend/plugins/aos/aos.css')}}">
     <!-- venobox popup -->
-    <link rel="stylesheet" href="{{asset('frontend/plugins/venobox/venobox.css')}}">
+    <link rel="stylesheet" href="{{asset('public/frontend/plugins/venobox/venobox.css')}}">
 
     <!-- Main Stylesheet -->
-    <link href="{{asset('frontend/css/style.css')}}" rel="stylesheet">
+    <link href="{{asset('public/frontend/css/style.css')}}" rel="stylesheet">
 
     @yield('css-script')
 
@@ -38,7 +38,7 @@
 <body>
     <!-- preloader start -->
     <div class="preloader">
-        <img src="{{asset('frontend/images/preloader.gif')}}" alt="preloader">
+        <img src="{{asset('public/frontend/images/preloader.gif')}}" alt="preloader">
     </div>
     <!-- preloader end -->
 
@@ -174,23 +174,23 @@
     <!-- /footer -->
 
     <!-- jQuery -->
-    <script src="{{asset('frontend/plugins/jQuery/jquery.min.js')}}"></script>
+    <script src="{{asset('public/frontend/plugins/jQuery/jquery.min.js')}}"></script>
     <!-- Bootstrap JS -->
-    <script src="{{asset('frontend/plugins/bootstrap/bootstrap.min.js')}}"></script>
+    <script src="{{asset('public/frontend/plugins/bootstrap/bootstrap.min.js')}}"></script>
     <!-- slick slider -->
-    <script src="{{asset('frontend/plugins/slick/slick.min.js')}}"></script>
+    <script src="{{asset('public/frontend/plugins/slick/slick.min.js')}}"></script>
     <!-- aos -->
-    <script src="{{asset('frontend/plugins/aos/aos.js')}}"></script>
+    <script src="{{asset('public/frontend/plugins/aos/aos.js')}}"></script>
     <!-- venobox popup -->
-    <script src="{{asset('frontend/plugins/venobox/venobox.min.js')}}"></script>
+    <script src="{{asset('public/frontend/plugins/venobox/venobox.min.js')}}"></script>
     <!-- filter -->
-    <script src="{{asset('frontend/plugins/filterizr/jquery.filterizr.min.js')}}"></script>
+    <script src="{{asset('public/frontend/plugins/filterizr/jquery.filterizr.min.js')}}"></script>
     <!-- google map -->
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBu5nZKbeK-WHQ70oqOWo-_4VmwOwKP9YQ"></script>
     <script src="plugins/google-map/gmap.js"></script>
 
     <!-- Main Script -->
-    <script src="{{asset('frontend/js/script.js')}}"></script>
+    <script src="{{asset('public/frontend/js/script.js')}}"></script>
 
 </body>
 
